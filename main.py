@@ -60,6 +60,17 @@ while True:
         # Mostramos el área del círculo
         print("El area del circulo es:", cr.area())
 
+    elif opcion == "5":
+        print("Saliendo del programa...")
+        break  # Se termina el bucle y se sale del programa
+
+    else:
+        print("Opcion no valida, intente de nuevo.")
+    
+    # Línea en blanco para separación visual del menú
+    print()
+    
+
   
 
     
