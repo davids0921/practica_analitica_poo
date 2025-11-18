@@ -29,3 +29,13 @@ while True:
         # Llamamos al método area() y mostramos el resultado
         print("El area del triangulo es:", tr.area())
 
+    elif opcion == "2":
+        # Pedimos el lado del cuadrado
+        lado = float(input("Ingrese el lado del cuadrado: "))
+
+        # Creamos un objeto de la clase cuadrado
+        cd = cuadrado(lado)
+
+        # Mostramos el área calculada
+        print("El area del cuadrado es:", cd.area())
+
