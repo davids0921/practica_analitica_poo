@@ -39,3 +39,16 @@ while True:
         # Mostramos el área calculada
         print("El area del cuadrado es:", cd.area())
 
+    elif opcion == "3":
+        # Pedimos base y altura del rectángulo
+        base = float(input("Ingrese la base del rectangulo: "))
+        altura = float(input("Ingrese la altura del rectangulo: "))
+
+        # Creamos objeto rectangulo
+        rt = rectangulo(base, altura)
+
+        # Imprimimos el área
+        print("El area del rectangulo es:", rt.area())
+
+    
+
