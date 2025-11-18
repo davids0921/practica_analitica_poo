@@ -50,5 +50,17 @@ while True:
         # Imprimimos el área
         print("El area del rectangulo es:", rt.area())
 
+    elif opcion == "4":
+        # Solicitamos el radio
+        radio = float(input("Ingrese el radio del circulo: "))
+
+        # Creamos objeto circulo
+        cr = circulo(radio)
+
+        # Mostramos el área del círculo
+        print("El area del circulo es:", cr.area())
+
+  
+
     
 
