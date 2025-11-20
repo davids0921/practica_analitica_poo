@@ -50,6 +50,14 @@ while True:
         figura = Cilindro(radio, altura)
         print("El área total del cilindro es:", figura.area())
  
+ elif opcion == "6":
+         base = float(input("Ingrese la base del paralelogramo: "))
+         altura = float(input("Ingrese la altura del paralelogramo: "))
+         figura = Paralelogramo(base, altura)
+         print("El área del paralelogramo es:", figura.area())
+
+
+
  elif opcion == "8":
       print("Salio del progrma")
 
