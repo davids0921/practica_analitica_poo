@@ -56,6 +56,13 @@ while True:
          figura = Paralelogramo(base, altura)
          print("El área del paralelogramo es:", figura.area())
 
+ elif opcion == "7":
+        b_mayor = float(input("Ingrese la base mayor del trapecio: "))
+        b_menor = float(input("Ingrese la base menor del trapecio: "))
+        altura = float(input("Ingrese la altura del trapecio: "))
+        figura = Trapecio(b_mayor, b_menor, altura)     
+        print("El área del trapecio es:", figura.area())    
+    
 
 
  elif opcion == "8":
