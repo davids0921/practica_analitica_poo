@@ -7,6 +7,8 @@ from rectangulo import rectangulo
 from cilindro import cilindro
 from paralelograma import paralelograma
 from trapecio import Trapecio
+from esfera import Esfera
+
 while True:
  print("------ MENÚ -------------")
  print("1. Triangulo")
@@ -16,7 +18,10 @@ while True:
  print("5. Cilindro")
  print("6. Paralelogramo")
  print("7. trapecio")
- print("8. salir del programa")
+ print("8. Esfera")
+ print("9. salir del programa")
+ 
+
 
  opcion = input("Que figura desea usar (1-4): ")
  print("Usted seleccionó la opción:",opcion)
@@ -63,9 +68,14 @@ while True:
         figura = Trapecio(b_mayor, b_menor, altura)     
         print("El área del trapecio es:", figura.area())    
     
+ if opcion == "8":
+    radio = float(input("Ingrese el radio de la esfera: "))
+    figura = Esfera(radio)
+    print("El área de la esfera es:", figura.area())
+  
 
 
- elif opcion == "8":
+ elif opcion == "9":
       print("Salio del progrma")
 
  else:
