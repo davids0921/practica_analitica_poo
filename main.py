@@ -1,77 +1,57 @@
 # Importamos las clases de cada archivo
 from Figuras_Geometricas import Figuras_Geometricas
 from triangulo import triangulo
+from circulo import circulo
 from cuadrado import cuadrado
 from rectangulo import rectangulo
-from circulo import circulo
-
-# Bucle infinito para mostrar el menú hasta que el usuario decida salir
+from cilindro import cilindro
+from paralelograma import paralelograma
+from trapecio import Trapecio
 while True:
-    # Mostramos el menú principal
-    print("------- FIGURAS GEOMETRICAS AREAS -------")
-    print("1. AREA DEL Triangulo")
-    print("2. AREA DEL Cuadrado")
-    print("3. AREA DEL Rectangulo")
-    print("4. AREA DEL Circulo")
-    print("5. CERRAR EL PROGRAMA")
+ print("------ MENÚ -------------")
+ print("1. Triangulo")
+ print("2. Circulo")
+ print("3. Cuadrado")
+ print("4. Rectangulo")
+ print("5. Cilindro")
+ print("6. Paralelogramo")
+ print("7. trapecio")
+ print("8. salir del programa")
 
-    # Solicitamos la opción al usuario como cadena (string)
-    opcion = input("SELECIONE UNA OPCION DE LAS 5: ").strip()
+ opcion = input("Que figura desea usar (1-4): ")
+ print("Usted seleccionó la opción:",opcion)
 
-    if opcion == "1":
-        # Solicitamos base y altura del triángulo
-        base = float(input("Ingrese la base del triangulo: "))
-        altura = float(input("Ingrese la altura del triangulo: "))
+ if opcion == "1":
+        base = float(input("Ingrese la base del triángulo: "))
+        altura = float(input("Ingrese la altura del triángulo: "))
+        figura = Triangulo(base, altura)
+        print("El area del triangulo es :", figura.area())
+    
 
-        # Creamos un objeto de la clase triangulo
-        tr = triangulo(base, altura)
+ elif opcion == "2":
+        radio = float(input("Ingrese el radio del círculo: "))
+        figura = Circulo(radio) 
+        print("El area del circulo es :", figura.area())
 
-        # Llamamos al método area() y mostramos el resultado
-        print("El area del triangulo es:", tr.area())
-
-    elif opcion == "2":
-        # Pedimos el lado del cuadrado
+ elif opcion == "3":
         lado = float(input("Ingrese el lado del cuadrado: "))
+        figura = Cuadrado(lado)
+        print("El area del triangulo es :", figura.area())
+ 
+ elif opcion == "4":
+        base = float(input("Ingrese la base del rectángulo: "))
+        altura = float(input("Ingrese la altura del rectángulo: "))
+        figura = Rectangulo(base, altura)
+        print("El area del triangulo es :", figura.area())
 
-        # Creamos un objeto de la clase cuadrado
-        cd = cuadrado(lado)
+ elif opcion == "5":
+        radio = float(input("Ingrese el radio del cilindro: "))
+        altura = float(input("Ingrese la altura del cilindro: "))
+        figura = Cilindro(radio, altura)
+        print("El área total del cilindro es:", figura.area())
+ 
+ elif opcion == "8":
+      print("Salio del progrma")
 
-        # Mostramos el área calculada
-        print("El area del cuadrado es:", cd.area())
-
-    elif opcion == "3":
-        # Pedimos base y altura del rectángulo
-        base = float(input("Ingrese la base del rectangulo: "))
-        altura = float(input("Ingrese la altura del rectangulo: "))
-
-        # Creamos objeto rectangulo
-        rt = rectangulo(base, altura)
-
-        # Imprimimos el área
-        print("El area del rectangulo es:", rt.area())
-
-    elif opcion == "4":
-        # Solicitamos el radio
-        radio = float(input("Ingrese el radio del circulo: "))
-
-        # Creamos objeto circulo
-        cr = circulo(radio)
-
-        # Mostramos el área del círculo
-        print("El area del circulo es:", cr.area())
-
-    elif opcion == "5":
-        print("Saliendo del programa...")
-        break  # Se termina el bucle y se sale del programa
-
-    else:
-        print("Opcion no valida, intente de nuevo.")
-    
-    # Línea en blanco para separación visual del menú
-    print()
-    
-
-  
-
-    
-
+ else:
+    print("Opción no válida. Por favor, seleccione un número del 1 al 8.")
